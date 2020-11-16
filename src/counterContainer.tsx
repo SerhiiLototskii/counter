@@ -1,13 +1,14 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {Counter} from "./Counter";
 import {ResetAC, UpdateCounterAC} from "./store/counterReducer";
+import {Counter} from "./Counter";
+
 
 let mapSateToProps = (state:any) => {
     return {
-        counter:state.counter,
-        disableIncrementValue: state.disableIncrementValue,
-        disableResetValue: state.disableResetValue
+        counter:state.counterPage.counter,
+        disableIncrementValue: state.counterPage.disableIncrementValue,
+        disableResetValue: state.counterPage.disableResetValue
     }
 }
 let mapDispatchToProps = (dispatch:any) => {

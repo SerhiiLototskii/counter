@@ -1,17 +1,22 @@
 import React from 'react';
-import {Button1} from "./Button1";
-import {Button2} from "./Button2";
+import {Button} from "./Button";
 
 
 export function Counter(props: any) {
+    debugger
     return (
         <div>
             <div className={props.disableIncrement ? "incStop" : ""}>{props.counter}</div>
-            <Button1 increment={props.increment}
-                     disableIncrement={props.disableIncrement}/>
-
-            <Button2 reset={props.reset}
-                     disableReset={props.disableReset}/>
+            <Button
+                title={'inc'}
+                action={props.updateCounter}
+                value={props.disableIncrementValue}
+            />
+            <Button
+                title={'reset'}
+                action={props.reset}
+                value={props.disableResetValue}
+            />
         </div>
 
 

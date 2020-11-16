@@ -9,15 +9,15 @@ let initialState = {
 
 
 const counterReducer = (state = initialState, action: any) => {
-    let stateCopy = {...state}
+
     switch (action.type) {
 
         case UPDATE_COUNTER: {
             if (state.counter === 4) {
-                stateCopy.disableIncrementValue = true
+                state.disableIncrementValue = true
             }
             return {...state,
-                counter: +1,
+                counter: state.counter +1,
                 disableResetValue: false
             }
         }
