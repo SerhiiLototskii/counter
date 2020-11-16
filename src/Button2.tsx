@@ -6,7 +6,7 @@ export function Button2(props: any) {
         <div>
             <button className="button"
                     onClick={props.reset}
-                    disabled={props.disableReset}> Reset
+                    disabled={props.disableResetValue}> Reset
             </button>
         </div>
 
